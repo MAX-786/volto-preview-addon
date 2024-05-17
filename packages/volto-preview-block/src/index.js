@@ -1,6 +1,7 @@
 import previewSVG from '@plone/volto/icons/link.svg';
 import PreviewView from './components/blocks/Preview/View';
 import PreviewEdit from './components/blocks/Preview/Edit';
+import { previewSchema } from './components/blocks/Preview/schema';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig.preview = {
@@ -16,6 +17,7 @@ const applyConfig = (config) => {
     sidebarTabId: 'preview',
     sidebarTabLabel: 'Preview',
     sidebarTabIcon: previewSVG,
+    blockSchema: previewSchema,
     security: {
       addPermission: [],
       view: [],
