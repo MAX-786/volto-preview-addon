@@ -10,13 +10,17 @@ const PreviewData = (props) => {
     ...props,
     intl,
   });
-  const onChangeField = (id, value) => {};
 
   return (
     <BlockDataForm
       schema={schema}
       title={schema.title}
-      onChangeField={onChangeField}
+      onChangeField={(id, value) => {
+        onChangeBlock(block, {
+          ...data,
+          [id]: value,
+        });
+      }}
       onChangeBlock={onChangeBlock}
       formData={data}
       block={block}

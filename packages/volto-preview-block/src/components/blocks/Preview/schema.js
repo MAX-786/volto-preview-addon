@@ -1,9 +1,13 @@
 import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
-  Preview: {
-    id: 'PreivewBlock',
-    defaultMessage: 'PreivewBlock',
+  PreviewBlock: {
+    id: 'Preivew Block',
+    defaultMessage: 'Preivew Block',
+  },
+  title: {
+    id: 'Title',
+    defaultMessage: 'Title',
   },
   previewURL: {
     id: 'URL',
@@ -25,12 +29,12 @@ const messages = defineMessages({
 
 export const previewSchema = (props) => {
   return {
-    title: props.intl.formatMessage(messages.Preview),
+    title: props.intl.formatMessage(messages.PreviewBlock),
     fieldsets: [
       {
         id: 'default',
         title: 'Default',
-        fields: ['title'],
+        fields: ['title', 'url'],
       },
       {
         id: 'style',
@@ -40,7 +44,11 @@ export const previewSchema = (props) => {
     ],
     properties: {
       title: {
+        title: props.intl.formatMessage(messages.title),
+      },
+      url: {
         title: props.intl.formatMessage(messages.previewURL),
+        widget: 'url',
       },
       align: {
         title: props.intl.formatMessage(messages.align),

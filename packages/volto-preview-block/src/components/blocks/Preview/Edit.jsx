@@ -8,7 +8,9 @@ const PreviewEdit = (props) => {
 
   return (
     <>
-      <PreviewView {...props} />
+      <div>
+        <h2>{data?.url}</h2>
+      </div>
       <SidebarPortal selected={selected}>
         <PreivewData
           data={data}
