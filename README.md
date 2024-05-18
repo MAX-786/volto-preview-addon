@@ -9,6 +9,10 @@ A new add-on for Volto
 
 ## Features
 
+
+https://github.com/MAX-786/volto-preview-addon/assets/99530996/fe479260-90c0-44f1-98ba-4a1e3a108939
+
+
 <!-- List your awesome features here -->
 
 ## Installation
