@@ -17,9 +17,13 @@ const messages = defineMessages({
     id: 'Alignment',
     defaultMessage: 'Alignment',
   },
-  size: {
-    id: 'Size',
-    defaultMessage: 'Size',
+  width: {
+    id: 'Width',
+    defaultMessage: 'Width',
+  },
+  height: {
+    id: 'Height',
+    defaultMessage: 'Height',
   },
   styleFieldset: {
     id: 'Style',
@@ -39,7 +43,7 @@ export const previewSchema = (props) => {
       {
         id: 'style',
         title: props.intl.formatMessage(messages.styleFieldset),
-        fields: ['align', 'size'],
+        fields: ['align', 'width', 'height'],
       },
     ],
     properties: {
@@ -55,9 +59,11 @@ export const previewSchema = (props) => {
         widget: 'align',
         actions: ['left', 'right', 'center'],
       },
-      size: {
-        title: props.intl.formatMessage(messages.size),
-        widget: 'image_size',
+      width: {
+        title: props.intl.formatMessage(messages.width),
+      },
+      height: {
+        title: props.intl.formatMessage(messages.height),
       },
     },
     required: [],

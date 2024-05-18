@@ -1,5 +1,4 @@
 import React from 'react';
-import PreviewView from './View';
 import { SidebarPortal } from '@plone/volto/components';
 import PreivewData from './Data';
 
